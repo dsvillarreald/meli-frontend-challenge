@@ -14,6 +14,7 @@ import Home from './pages/Home';
 import Breadcrumb from './shared/Breadcrumb';
 import Detail from './pages/Detail';
 
+console.log(process.env.REACT_APP_ENDPONT);
 function App() {
   return (
     <BrowserRouter>

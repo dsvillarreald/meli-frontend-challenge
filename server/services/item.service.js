@@ -1,8 +1,8 @@
 require('dotenv').config();
 const axios = require('axios');
-const limit = 4;
-const apiUrl = 'https://api.mercadolibre.com/';
-const reg = 'MLA/';
+const limit = process.env.APP_LIMIT;
+const apiUrl = `${process.env.APP_ENDPOINT}`;
+const reg = `${process.env.APP_REGION}`;
 
 const getItems = async (search) => {
     try {

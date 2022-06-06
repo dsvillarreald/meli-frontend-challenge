@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 /**
  * Servicio para mappear la extructura de item
  * @param response  respuesta para el cliente
@@ -48,8 +50,8 @@
   
   const mapperAuthor = () => (
     { 
-      name: 'David Sebastian',
-      lastname: 'Villarreal Díaz' 
+      name: process.env.APP_AUTHOR_NAME,
+      lastname: process.env.APP_AUTHOR_LASTNAME 
     }
   );
 
