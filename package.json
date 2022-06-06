@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server",
+    "server": "nodemon server/server.js",
+    "dev": "concurrently \"npm run server\" \"cd client && npm start\"",
+    "test": "concurrently \"cd client && npm test\" \"jest\""
+  },
+  "keywords": [],
+  "author": "David Sebastian Villarreal Diaz",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
+    "nodemon": "^2.0.16"
+  },
+  "jest": {
+    "testMatch": ["**/?(*.)+(spec).[jt]s?(x)"]
+  }
+}
