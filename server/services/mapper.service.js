@@ -50,8 +50,8 @@ require('dotenv').config();
   
   const mapperAuthor = () => (
     { 
-      name: process.env.APP_AUTHOR_NAME,
-      lastname: process.env.APP_AUTHOR_LASTNAME 
+      name: 'David Sebastian',
+      lastname: 'Villarreal Diaz' 
     }
   );
 
