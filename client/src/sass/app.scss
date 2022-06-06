@@ -1,0 +1,239 @@
+@import './tokens/meli-spacing';
+@import './tokens/meli-colors';
+
+.general-content {
+    padding: 0 12%;
+}
+
+.navbar {
+    background-color: $yellow;
+    padding-left: 12%;
+    padding-right: 12%;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    &__logo {
+        @extend .p-m-right;
+    }
+    .search {
+        display: flex;
+        border-radius: 4px;
+        overflow: hidden;
+        width: 100%;
+
+        &__input {
+            border: 0px;
+            width: 100%;
+            font-size: 18px;
+            padding: $spacing-s $spacing-2s;
+            color: $gray;
+
+            &::placeholder {
+            font-size: 18px;
+            color: $light-gray;
+            opacity: 1;
+            }
+        }
+
+        &__input:focus{
+            outline: none;
+        }
+
+        &__button {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0px;
+            color: $gray;
+            width: $spacing-x;
+        }
+    }
+    
+}
+
+.breadcrumb {
+    @extend .p-2s-height;
+    color: $gray;
+
+    .breadcrum-description {
+        font-size: 14px;
+        &:after {
+            content: "  > "
+        }
+        &:last-child {
+            font-weight: 500;
+        }
+        &:last-child:after {
+            content: '';
+        }
+    }
+}
+.general-card {
+    @extend .m-m-bottom;
+    background-color: $white;
+    border-radius: 4px;
+
+    .line {
+        @extend .m-xl-width;
+        border-bottom: 1px solid $light-gray;
+    }
+}
+
+.item {
+    display: flex;
+    align-items: flex-start;
+
+    &__image {
+        @extend .p-2s;
+        width: 180px;
+        height: 180px;
+        min-width: 180px;
+        min-height: 180px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    &__price {
+        @extend .p-m-height;
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        color: $dark !important;
+        font-weight: 400;
+        cursor: pointer;
+
+        .icon-shipping {
+            @extend .p-s-left;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        color: $dark !important;
+        cursor: pointer;
+    }
+
+    &__condition {
+        font-size: 18px;
+        color: $medium-gray;
+    }
+    
+    &__location {
+        @extend .p-x-top;
+        font-size: 12px;
+        color: $gray;
+    }
+    .content-info {
+        @extend .m-s-right;
+        width: 60%;
+    }
+    .content-location {
+        width: 20%;
+    }
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    &__image {
+        @extend .p-2s;
+        width: 680px;
+        height: 680px;
+        max-width: 680px;
+        max-height: 680px;
+        min-width: 40%;
+        min-height: 40%;
+    }
+
+    &__description {
+        @extend .p-m;
+        .title {
+            @extend .p-m-bottom;
+            font-size: 28px;
+        }
+        .body {
+            font-size: 16px;
+            color: $gray;
+        }
+        
+    }
+}
+
+.purchase {
+    @extend .p-m-top;
+    @extend .m-m-right;
+    max-width: 20%;
+    &__info {
+        @extend .p-2s-bottom;
+        font-size: 14px;
+    }
+
+    &__title {
+        font-size: 24px;
+    }
+
+    &__price {
+        @extend .p-m-height;
+        font-size: 46px;
+    }
+
+    &__button {
+        @extend .p-s-height;
+        width: 100%;
+        font-size: 18px;
+        color: $white;
+        background-color: $blue;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+    }
+
+}
+
+.loading {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: $dark-gray;
+    opacity: .2;
+
+    &__inner {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    &__content {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .spinner {
+        width: 75px;
+        height: 75px;
+        display: inline-block;
+        border-width: 5px;
+        border-color: $gray;
+        border-top-color: $white;
+        animation: spin 1s infinite linear;
+        border-radius: 100%;
+        border-style: solid;
+    }
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+
+
+
